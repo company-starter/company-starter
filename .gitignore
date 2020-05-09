@@ -154,3 +154,4 @@ cdk.out
 
 # Parcel build directories
 .cache
+.npmrc

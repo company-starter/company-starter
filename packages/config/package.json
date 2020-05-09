@@ -1,12 +1,13 @@
 {
   "name": "config",
   "version": "1.0.0",
-  "description": "The config repository including eslint, tsconfig, tsconfig.build, jest.config, licence",
+  "description": "The config repository including eslint, tsconfig, tsconfig.build, jest.config, licence and more",
   "author": "company-starter",
   "directories": {
     "lib": "lib"
   },
   "files": [
     "lib"
-  ]
+  ],
+  "gitHead": "ae6c8d75de75b5575563f7c59661a11a7247ccf0"
 }
