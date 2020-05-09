@@ -1,0 +1,22 @@
+{
+  "name": "@company-starter/eslint-config",
+  "version": "1.0.0",
+  "description": "Eslint config",
+  "author": "company-starter",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "peerDependencies": {
+    "eslint": ">= 7.0.0",
+    "@typescript-eslint/eslint-plugin": ">= 2.31.0",
+    "@typescript-eslint/parser": ">= 2.31.0",
+    "eslint-config-prettier": ">= 6.11.0",
+    "eslint-plugin-import": ">= 2.20.2",
+    "eslint-plugin-prettier": ">= 3.1.3",
+    "prettier": ">= 2.0.5"
+  }
+}
