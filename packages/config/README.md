@@ -1,11 +1,10 @@
-# `config`
+# `@company-starter/config`
 
-> TODO: description
+The config repository including tsconfig, tsconfig.build, jest.config, licence and more
 
 ## Usage
 
 ```
-const config = require('config');
-
-// TODO: DEMONSTRATE API
+# install dependencies
+npm install @company-starter/config
 ```
