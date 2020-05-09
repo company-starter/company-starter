@@ -12,6 +12,7 @@ module.exports = {
     project: './tsconfig.json',
     createDefaultProgram: true
   },
+  ignorePatterns: ['node_modules/*', 'package-lock.json'],
   plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
