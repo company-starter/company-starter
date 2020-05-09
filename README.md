@@ -3,7 +3,7 @@ An awesome starter for Full Stack JS companies
 
 ## Technos we ❤️
 
-Lerna, Verdaccio, NestJS, React, Cypress, Pupeeter
+Typescript, Lerna, Verdaccio, NestJS, React, Cypress, Pupeeter
 
 Deployed on AWS with the AWS CDK
 
