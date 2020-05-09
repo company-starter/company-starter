@@ -109,6 +109,7 @@ dist
 bundle.zip
 /dist
 /node_modules
+node_modules
 
 # Logs
 logs

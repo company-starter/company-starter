@@ -13,8 +13,8 @@
     "module": "commonjs",
     "declaration": true,
     "experimentalDecorators": true,
-    "target": "es2018",
-    "lib": ["es2019"],
+    "target": "es2015",
+    "lib": ["es2017"],
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -26,6 +26,10 @@
     "noFallthroughCasesInSwitch": false,
     "strictPropertyInitialization":false,
     "typeRoots": ["./node_modules/@types"],
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "rootDir": ".",
   },
   "exclude": ["node_modules", "dist"]
 }

@@ -2,15 +2,16 @@
   "root": true,
   "env": {
     "node": true,
-    "jest": true
+    "jest": true,
+    "es2017": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2017,
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "createDefaultProgram": true
   },
-  "ignorePatterns": ["**/*"],
   "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
@@ -29,7 +30,6 @@
         "maxEOF": 1
       }
     ],
-    "no-unused-vars": "off",
     "import/order": [
       "error",
       {
@@ -40,12 +40,12 @@
         "groups": ["index", "sibling", "parent", "internal", "external", "builtin"]
       }
     ],
-    "import/no-unresolved": "off",
     "@typescript-eslint/explicit-member-accessibility": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-parameter-properties": "off",
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/naming-convention": [
       "error",
       {

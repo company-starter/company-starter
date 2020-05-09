@@ -1,0 +1,19 @@
+{
+  "version": "independent",
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "publish": {
+      "registry": "http://localhost:4873",
+      "ignoreChanges": ["*.md"],
+      "conventionalCommits": false,
+      "message": "chore(release): publish",
+      "allowBranch": "master"
+    },
+    "bootstrap": {
+      "ignore": "component-*",
+      "npmClientArgs": ["--no-package-lock"]
+    }
+  }
+}
