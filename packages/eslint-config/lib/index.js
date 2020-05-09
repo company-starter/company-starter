@@ -23,6 +23,17 @@ module.exports = {
     'prettier/@typescript-eslint'
   ],
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        trailingComma: 'none',
+        semi: false
+      },
+      {
+        usePrettierrc: false
+      }
+    ],
     'no-multiple-empty-lines': [
       'error',
       {
