@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eslint config",
   "author": "company-starter",
   "main": "lib/index.js",
@@ -11,9 +11,9 @@
     "lib"
   ],
   "peerDependencies": {
-    "eslint": ">= 7.0.0",
     "@typescript-eslint/eslint-plugin": ">= 2.31.0",
     "@typescript-eslint/parser": ">= 2.31.0",
+    "eslint": ">= 7.0.0",
     "eslint-config-prettier": ">= 6.11.0",
     "eslint-plugin-import": ">= 2.20.2",
     "eslint-plugin-prettier": ">= 3.1.3",
