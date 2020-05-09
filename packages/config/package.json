@@ -2,5 +2,11 @@
   "name": "config",
   "version": "0.0.1",
   "description": "The config repository including eslint, tsconfig, tsconfig.build, jest.config, licence",
-  "author": "company-starter"
+  "author": "company-starter",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ]
 }
