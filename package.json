@@ -9,7 +9,7 @@
     "build": "lerna run build",
     "changed": "lerna changed",
     "diff": "lerna diff",
-    "prepublish": "lerna run build",
+    "prepublish": "npm run build",
     "publish": "lerna publish",
     "new-version": "lerna version --force-publish",
     "test": "lerna run --parallel --no-bail test",
