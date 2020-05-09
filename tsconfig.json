@@ -29,7 +29,7 @@
     "importHelpers": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "rootDir": ".",
+    "rootDir": "."
   },
   "exclude": ["node_modules", "dist"]
 }

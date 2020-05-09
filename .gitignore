@@ -144,8 +144,8 @@ lerna-debug.log*
 
 ############### CDK TO CLEAR LATER ###############
 
-*.js
-!jest.config.js
+# *.js
+# !jest.config.js
 *.d.ts
 
 # CDK asset staging directory

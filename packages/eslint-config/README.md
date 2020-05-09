@@ -1,11 +1,12 @@
 # `@company-starter/eslint-config`
 
-> TODO: description
+Eslint configuration
 
 ## Usage
 
 ```
-const eslintConfig = require('eslint-config');
-
-// TODO: DEMONSTRATE API
+npm install @company-starter/eslint-config
 ```
+
+then in your .eslintrc file, 
+"extends": "@company-starter/eslint-config"
