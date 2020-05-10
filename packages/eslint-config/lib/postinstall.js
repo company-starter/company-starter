@@ -1,12 +1,11 @@
 'use strict'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { changes } = require('./changes')
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { update } = require('./package-json')
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { getParentFolder } = require('./utils')
+const { packageJson, utils } = require('@company-starter/utils-config')
 
-const parentFolder = getParentFolder()
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { packageJsonChanges } = require('./changes')
 
-update(parentFolder, changes)
+const parentFolder = utils.getParentFolder()
+
+packageJson.update(parentFolder, packageJsonChanges)

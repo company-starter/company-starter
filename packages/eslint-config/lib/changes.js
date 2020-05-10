@@ -1,6 +1,6 @@
 'use strict'
 
-const changes = {
+const packageJsonChanges = {
   scripts: {
     add: [
       {
@@ -17,5 +17,5 @@ const changes = {
 }
 
 module.exports = {
-  changes
+  packageJsonChanges
 }
