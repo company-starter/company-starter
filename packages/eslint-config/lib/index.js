@@ -12,7 +12,12 @@ module.exports = {
     project: './tsconfig.json',
     createDefaultProgram: true
   },
-  ignorePatterns: ['node_modules/*', 'dist/*', 'package-lock.json'],
+  ignorePatterns: ['**/dist/**'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx']
+    }
+  ],
   plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
@@ -50,12 +55,12 @@ module.exports = {
           order: 'asc'
         },
         groups: [
-          'index',
-          'sibling',
-          'parent',
-          'internal',
+          'builtin',
           'external',
-          'builtin'
+          'internal',
+          'parent',
+          'sibling',
+          'index'
         ]
       }
     ],
