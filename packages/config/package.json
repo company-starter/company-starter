@@ -1,12 +1,15 @@
 {
   "name": "@company-starter/config",
-  "version": "1.0.4",
-  "description": "The config repository including tsconfig, tsconfig.build, jest.config, licence and more",
+  "version": "1.0.0",
+  "description": "TypeScript configuration",
   "author": "company-starter",
   "directories": {
     "lib": "lib"
   },
   "files": [
     "lib"
-  ]
+  ],
+  "scripts": {
+    "postinstall": "sh lib/tools/postinstall.sh"
+  }
 }

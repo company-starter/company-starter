@@ -15,7 +15,7 @@
     "test:packages": "lerna run test",
     "test:packages:ci": "lerna run test:ci",
     "test:packages:cov": "lerna run test:cov",
-    "lint": "eslint . --fix",
+    "lint": "eslint . --ext js,ts,js,jsx,json --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
