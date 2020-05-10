@@ -1,7 +1,7 @@
 {
   "name": "@company-starter/config",
   "version": "1.0.4",
-  "description": "The config repository including tsconfig, tsconfig.build, jest.config, licence and more",
+  "description": "The config repository licence and more",
   "author": "company-starter",
   "directories": {
     "lib": "lib"
