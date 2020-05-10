@@ -1,5 +1,9 @@
 'use strict'
 
+const eslintrcJsonChanges = {
+  extends: '@company-starter/eslint-config'
+}
+
 const packageJsonChanges = {
   scripts: {
     lint: 'eslint . --fix',
@@ -8,5 +12,6 @@ const packageJsonChanges = {
 }
 
 module.exports = {
+  eslintrcJsonChanges,
   packageJsonChanges
 }

@@ -21,7 +21,7 @@
     "lint": "eslint . --fix"
   },
   "devDependencies": {
-    "@company-starter/config": "file:packages/config",
+    "@company-starter/base-config": "file:packages/base-config",
     "@company-starter/eslint-config": "file:packages/eslint-config",
     "@company-starter/husky-config": "file:packages/husky-config",
     "@company-starter/jest-config": "file:packages/jest-config",
