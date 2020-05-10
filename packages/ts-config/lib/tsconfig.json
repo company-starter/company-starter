@@ -6,7 +6,6 @@
     "emitDecoratorMetadata": true,
     "resolveJsonModule": true,
     "sourceMap": true,
-    "baseUrl": "./",
     "incremental": true,
     "moduleResolution": "node",
     "allowJs": false,
@@ -29,8 +28,5 @@
     "importHelpers": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "rootDir": ".",
-    "outDir": "./dist",
-  },
-  "exclude": ["node_modules", "dist"]
+  }
 }
