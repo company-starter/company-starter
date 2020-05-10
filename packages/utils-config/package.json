@@ -1,7 +1,7 @@
 {
   "name": "@company-starter/utils-config",
   "version": "1.0.4",
-  "description": "Utils config",
+  "description": "Utils config.",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib"

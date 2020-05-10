@@ -1,7 +1,7 @@
 {
   "name": "@company-starter/husky-config",
   "version": "1.0.2",
-  "description": "Husky config",
+  "description": "Husky config.",
   "directories": {
     "lib": "lib"
   },
