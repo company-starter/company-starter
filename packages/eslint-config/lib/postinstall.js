@@ -3,8 +3,10 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { changes } = require('./changes')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const postinstallRefacto = require('./package-json')
+const { update } = require('./package-json')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { getParentFolder } = require('./utils')
 
-const parentFolder = postinstallRefacto.getParentFolder()
+const parentFolder = getParentFolder()
 
-postinstallRefacto.packageJson(parentFolder, changes)
+update(parentFolder, changes)
