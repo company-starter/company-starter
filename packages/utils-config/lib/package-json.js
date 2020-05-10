@@ -1,17 +1,22 @@
 'use strict'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { saveJsonFile, loadJsonFile } = require('./utils')
+const { resolve } = require('path')
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { resolve } = require('path')
+const { saveJsonFile, loadJsonFile } = require('./utils')
 
 const KEYS = [
   'scripts',
   'devDependencies',
   'dependencies',
   'peerDependencies',
-  'jest'
+  'jest',
+  'author',
+  'private',
+  'repository',
+  'license',
+  'husky'
 ]
 
 const checkKeys = (keys) => {
@@ -22,6 +27,14 @@ const init = (packageJson) => {
   KEYS.forEach((key) => {
     if (!packageJson[key]) {
       packageJson[key] = {}
+    }
+  })
+}
+
+const clean = (packageJson) => {
+  Object.keys(packageJson).forEach((key) => {
+    if (packageJson[key] === {}) {
+      packageJson[key] = undefined
     }
   })
 }
@@ -49,6 +62,7 @@ const update = (parentFolder, changes) => {
   const packageJson = loadJsonFile(packageJsonPath)
   init(packageJson)
   updateChanges(packageJson, changes)
+  clean(packageJson)
   saveJsonFile(packageJsonPath, packageJson)
 }
 
