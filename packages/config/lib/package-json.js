@@ -19,8 +19,14 @@ const update = (parentFolder) => {
   const parentPackagePath = path.resolve(parentFolder, 'package.json')
   const parentPackage = loadJsonFile(parentPackagePath)
 
+  // should also remove format script because no more prettier
   Object.assign(parentPackage.scripts, {
-    lint: 'eslint . --ext js,ts,js,jsx,json --fix'
+    lint: 'eslint . --ext js,ts,js,jsx,json --fix',
+    test: 'jest',
+    'test:watch': 'jest --watch',
+    'test:cov': 'jest --coverage',
+    'test:debug':
+      'node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand'
   })
 
   Object.assign(parentPackage.devDependencies, {
@@ -43,6 +49,12 @@ const update = (parentFolder) => {
     'ts-node': '8.6.2',
     'tsconfig-paths': '3.9.0',
     typescript: '3.7.4'
+  })
+
+  Object.assign(parentPackage.jest, {
+    preset: '@company-starter/jest-config/lib',
+    rootDir: 'test',
+    coverageDirectory: '../coverage'
   })
 
   saveJsonFile(parentPackagePath, parentPackage)
