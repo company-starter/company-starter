@@ -22,11 +22,10 @@
     "lint": "eslint . --fix"
   },
   "devDependencies": {
-    "@company-starter/config": "1.0.10",
-    "@company-starter/eslint-config": "1.0.12",
-    "@company-starter/jest-config": "1.0.4",
-    "@company-starter/ts-config": "1.0.5",
-    "@company-starter/utils-config": "1.0.2",
+    "@company-starter/config": "file:packages/config",
+    "@company-starter/eslint-config": "file:packages/eslint-config",
+    "@company-starter/jest-config": "file:packages/jest-config",
+    "@company-starter/ts-config": "file:packages/ts-config",
     "@types/jest": "25.2.0",
     "@typescript-eslint/eslint-plugin": "2.31.0",
     "@typescript-eslint/parser": "2.31.0",
@@ -46,13 +45,5 @@
     "preset": "@company-starter/jest-config/lib",
     "rootDir": "test",
     "coverageDirectory": "../coverage"
-  },
-  "dependencies": {
-    "@company-starter/config": "file:packages/config",
-    "@company-starter/eslint-config": "file:packages/eslint-config",
-    "@company-starter/jest-config": "file:packages/jest-config",
-    "@company-starter/ts-config": "file:packages/ts-config",
-    "@company-starter/utils-config": "file:packages/utils-config"
-  },
-  "peerDependencies": {}
+  }
 }
