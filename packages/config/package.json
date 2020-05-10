@@ -1,7 +1,7 @@
 {
   "name": "@company-starter/config",
   "version": "1.0.3",
-  "description": "TypeScript configuration",
+  "description": "The config repository including tsconfig, tsconfig.build, jest.config, licence and more",
   "author": "company-starter",
   "directories": {
     "lib": "lib"
