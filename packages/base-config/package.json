@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/base-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The config repository licence and more",
   "directories": {
     "lib": "lib"
@@ -12,8 +12,8 @@
     "@company-starter/utils-config": ">= file:../utils-config"
   },
   "devDependencies": {
-    "@company-starter/utils-config": "file:../utils-config",
-    "@company-starter/jest-config": "file:../jest-config"
+    "@company-starter/jest-config": "file:../jest-config",
+    "@company-starter/utils-config": "file:../utils-config"
   },
   "scripts": {
     "postinstall": "node lib/postinstall.js",

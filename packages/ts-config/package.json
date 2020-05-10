@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/ts-config",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "TypeScript configuration",
   "directories": {
     "lib": "lib"
@@ -14,8 +14,8 @@
     "typescript": ">= 3.8.3"
   },
   "devDependencies": {
-    "@company-starter/utils-config": "file:../utils-config",
-    "@company-starter/jest-config": "file:../jest-config"
+    "@company-starter/jest-config": "file:../jest-config",
+    "@company-starter/utils-config": "file:../utils-config"
   },
   "scripts": {
     "postinstall": "node lib/postinstall.js",
