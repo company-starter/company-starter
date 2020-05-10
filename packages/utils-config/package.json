@@ -1,0 +1,12 @@
+{
+  "name": "@company-starter/utils-config",
+  "version": "1.0.0",
+  "description": "Utils config",
+  "author": "company-starter",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ]
+}
