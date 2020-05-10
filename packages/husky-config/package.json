@@ -1,7 +1,7 @@
 {
   "name": "@company-starter/husky-config",
   "version": "1.0.3",
-  "description": "Husky config.",
+  "description": "Husky config",
   "directories": {
     "lib": "lib"
   },
@@ -13,9 +13,19 @@
     "husky": "4.2.5"
   },
   "devDependencies": {
-    "@company-starter/utils-config": "file:../utils-config"
+    "@company-starter/utils-config": "file:../utils-config",
+    "@company-starter/jest-config": "file:../jest-config"
   },
   "scripts": {
-    "postinstall": "node lib/postinstall.js"
+    "postinstall": "node lib/postinstall.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
+  },
+  "jest": {
+    "preset": "@company-starter/jest-config/lib",
+    "rootDir": "test",
+    "coverageDirectory": "../coverage"
   }
 }
