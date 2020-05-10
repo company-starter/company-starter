@@ -2,7 +2,6 @@
   "name": "@company-starter/eslint-config",
   "version": "1.0.14",
   "description": "Eslint config",
-  "author": "company-starter",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib"

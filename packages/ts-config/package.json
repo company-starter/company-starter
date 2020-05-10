@@ -2,7 +2,6 @@
   "name": "@company-starter/ts-config",
   "version": "1.0.5",
   "description": "TypeScript configuration",
-  "author": "company-starter",
   "directories": {
     "lib": "lib"
   },
@@ -10,6 +9,7 @@
     "lib"
   ],
   "peerDependencies": {
+    "@types/node": ">= 13.9.1",
     "typescript": ">= 3.8.3"
   }
 }

@@ -1,13 +1,16 @@
 {
-  "name": "@company-starter/config",
-  "version": "1.0.10",
-  "description": "The config repository licence and more",
+  "name": "@company-starter/husky-config",
+  "version": "1.0.0",
+  "description": "Husky config",
   "directories": {
     "lib": "lib"
   },
   "files": [
     "lib"
   ],
+  "peerDependencies": {
+    "husky": "4.2.5"
+  },
   "devDependencies": {
     "@company-starter/utils-config": "file:../utils-config"
   },

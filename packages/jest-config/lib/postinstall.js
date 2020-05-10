@@ -8,6 +8,4 @@ const { packageJsonChanges } = require('./changes')
 
 const parentFolder = utils.getParentFolder()
 
-if (parentFolder !== process.env.PWD) {
-  packageJson.update(parentFolder, packageJsonChanges)
-}
+packageJson.update(parentFolder, packageJsonChanges)

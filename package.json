@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "An awesome starter for Full Stack JS companies",
   "author": "company-starter",
-  "private": true,
   "license": "MY_COMPANY_LICENCE",
   "scripts": {
     "build:packages": "lerna run build",
@@ -12,9 +11,9 @@
     "prepublish": "npm run build:packages",
     "publish": "lerna publish",
     "new-version": "lerna version --force-publish",
-    "test:packages": "lerna run test",
-    "test:packages:ci": "lerna run test:ci",
-    "test:packages:cov": "lerna run test:cov",
+    "test:packages": "lerna run --parallel test",
+    "test:packages:ci": "lerna run --parallel --no-bail test:ci",
+    "test:packages:cov": "lerna run --parallel test:cov",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -24,6 +23,7 @@
   "devDependencies": {
     "@company-starter/config": "file:packages/config",
     "@company-starter/eslint-config": "file:packages/eslint-config",
+    "@company-starter/husky-config": "file:packages/husky-config",
     "@company-starter/jest-config": "file:packages/jest-config",
     "@company-starter/ts-config": "file:packages/ts-config",
     "@types/jest": "25.2.0",
@@ -45,5 +45,11 @@
     "preset": "@company-starter/jest-config/lib",
     "rootDir": "test",
     "coverageDirectory": "../coverage"
+  },
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run test"
+    }
   }
 }

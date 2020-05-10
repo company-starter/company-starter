@@ -1,10 +1,9 @@
 'use strict'
 
 const packageJsonChanges = {
-  scripts: {
-    lint: 'eslint . --fix',
-    format: undefined
-  }
+  author: 'company-starter',
+  license: 'MY_COMPANY_LICENCE',
+  private: true
 }
 
 module.exports = {

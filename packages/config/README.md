@@ -6,5 +6,5 @@ The config repository including tsconfig, tsconfig.build, jest.config, licence a
 
 ```
 # install dependencies
-npm install @company-starter/config
+npm install @company-starter/config and make sur to install the peerDependencies
 ```

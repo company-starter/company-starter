@@ -1,16 +1,28 @@
 'use strict'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { readFileSync, writeFileSync } = require('fs')
+const { copyFile, readFileSync, writeFileSync } = require('fs')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { resolve } = require('path')
 
-const loadJsonFile = (filepath) => {
-  const rawData = readFileSync(filepath)
+const copy = (fileDir, fileName) => {
+  copyFile(
+    resolve(fileDir, fileName),
+    resolve(process.env.INIT_CWD, fileName),
+    (err) => {
+      if (err) throw err
+    }
+  )
+}
+
+const loadJsonFile = (filePath) => {
+  const rawData = readFileSync(filePath)
   return JSON.parse(rawData.toString())
 }
 
-const saveJsonFile = (filepath, data) => {
+const saveJsonFile = (filePath, data) => {
   const content = `${JSON.stringify(data, null, '  ')}\n`
-  writeFileSync(filepath, content)
+  writeFileSync(filePath, content)
 }
 
 const getParentFolder = () => {
@@ -20,14 +32,11 @@ const getParentFolder = () => {
     throw new Error('This does not seem to be run by npm')
   }
 
-  if (parentFolder === process.env.PWD) {
-    throw new Error('This cannot be executed in this directory')
-  }
-
   return parentFolder
 }
 
 module.exports = {
+  copy,
   getParentFolder,
   loadJsonFile,
   saveJsonFile
