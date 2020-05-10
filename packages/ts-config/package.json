@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/ts-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeScript configuration",
   "author": "company-starter",
   "directories": {
