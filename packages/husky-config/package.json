@@ -9,6 +9,7 @@
     "lib"
   ],
   "peerDependencies": {
+    "@company-starter/utils-config": ">= file:../utils-config",
     "husky": "4.2.5"
   },
   "devDependencies": {

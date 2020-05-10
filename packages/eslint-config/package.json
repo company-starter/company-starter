@@ -10,6 +10,7 @@
     "lib"
   ],
   "peerDependencies": {
+    "@company-starter/utils-config": ">= file:../utils-config",
     "@typescript-eslint/eslint-plugin": ">= 2.31.0",
     "@typescript-eslint/parser": ">= 2.31.0",
     "eslint": ">= 7.0.0",
