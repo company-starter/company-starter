@@ -6,25 +6,44 @@
   "private": true,
   "license": "MY_COMPANY_LICENCE",
   "scripts": {
-    "build": "lerna run build",
+    "build:packages": "lerna run build",
     "changed": "lerna changed",
     "diff": "lerna diff",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build:packages",
     "publish": "lerna publish",
     "new-version": "lerna version --force-publish",
-    "test": "lerna run --parallel --no-bail test",
-    "test:ci": "lerna run test:ci",
-    "lint": "eslint . --fix"
+    "test:packages": "lerna run test",
+    "test:packages:ci": "lerna run test:ci",
+    "test:packages:cov": "lerna run test:cov",
+    "lint": "eslint . --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
   },
   "devDependencies": {
+    "lerna": "3.20.2",
+    "@company-starter/config": "1.0.4",
+    "@company-starter/eslint-config": "1.0.7",
+    "@company-starter/jest-config": "1.0.4",
+    "@company-starter/ts-config": "1.0.4",
     "@typescript-eslint/eslint-plugin": "2.31.0",
     "@typescript-eslint/parser": "2.31.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-import": "2.20.2",
     "eslint-plugin-prettier": "3.1.3",
-    "lerna": "3.20.2",
     "prettier": "2.0.5",
+    "@types/jest": "25.2.0",
+    "jest": "26.0.1",
+    "ts-jest": "25.5.1",
+    "ts-node": "8.10.1",
+    "tsconfig-paths": "3.9.0",
     "typescript": "3.8.3"
+  },
+  "jest": {
+    "preset": "@company-starter/jest-config/lib",
+    "rootDir": "test",
+    "coverageDirectory": "../coverage"
   }
 }
