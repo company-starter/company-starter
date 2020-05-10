@@ -18,9 +18,33 @@ const saveJsonFile = (filepath, data) => {
 const update = (parentFolder) => {
   const parentPackagePath = path.resolve(parentFolder, 'package.json')
   const parentPackage = loadJsonFile(parentPackagePath)
+
   Object.assign(parentPackage.scripts, {
     lint: 'eslint . --ext js,ts,js,jsx,json --fix'
   })
+
+  Object.assign(parentPackage.devDependencies, {
+    '@company-starter/eslint-config': '1.0.7',
+    '@company-starter/jest-config': '1.0.4',
+    '@company-starter/ts-config': '1.0.4',
+    '@types/jest': '25.2.1',
+    '@types/node': '13.9.1',
+    '@types/supertest': '2.0.8',
+    '@typescript-eslint/eslint-plugin': '2.31.0',
+    '@typescript-eslint/parser': '2.31.0',
+    eslint: '6.8.0',
+    'eslint-config-prettier': '6.11.0',
+    'eslint-plugin-import': '2.20.2',
+    'eslint-plugin-prettier': '3.1.3',
+    jest: '25.1.0',
+    prettier: '2.0.5',
+    supertest: '4.0.2',
+    'ts-jest': '25.2.1',
+    'ts-node': '8.6.2',
+    'tsconfig-paths': '3.9.0',
+    typescript: '3.7.4'
+  })
+
   saveJsonFile(parentPackagePath, parentPackage)
 }
 
