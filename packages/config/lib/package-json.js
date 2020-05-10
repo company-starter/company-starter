@@ -15,11 +15,15 @@ const saveJsonFile = (filepath, data) => {
   fs.writeFileSync(filepath, content)
 }
 
-export const packageJson = (parentFolder) => {
+const update = (parentFolder) => {
   const parentPackagePath = path.resolve(parentFolder, 'package.json')
   const parentPackage = loadJsonFile(parentPackagePath)
   Object.assign(parentPackage.scripts, {
     lint: 'eslint . --ext js,ts,js,jsx,json --fix'
   })
   saveJsonFile(parentPackagePath, parentPackage)
+}
+
+module.exports = {
+  update
 }
