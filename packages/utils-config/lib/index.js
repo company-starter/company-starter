@@ -22,12 +22,23 @@ const updateChanges = (json, changes) => {
   Object.keys(changes).forEach((changesKey) => {
     const change = changes[changesKey]
     if (typeof change === 'object' && change !== null) {
-      if (!json[changesKey]) {
-        json[changesKey] = {}
+      if (Array.isArray(change)) {
+        if (!json[changesKey]) {
+          json[changesKey] = []
+        }
+        change.forEach((value) => {
+          if (!json[changesKey].includes(value)) {
+            json[changesKey].push(value)
+          }
+        })
+      } else {
+        if (!json[changesKey]) {
+          json[changesKey] = {}
+        }
+        updateChanges(json[changesKey], change)
       }
-      updateChanges(json[changesKey], change)
     } else {
-      json[changesKey] = changes[changesKey]
+      json[changesKey] = change
     }
   })
 }
@@ -50,11 +61,9 @@ const copy = (fileDir, fileName) => {
 }
 
 const remove = (fileName) => {
-  unlink(resolve(process.env.INIT_CWD, fileName), (err) => {
-    if (err) throw err
-  })
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  unlink(resolve(process.env.INIT_CWD, fileName), () => {})
 }
-
 const getParentFolder = () => {
   const parentFolder = process.env.INIT_CWD
 

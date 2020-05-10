@@ -11,5 +11,11 @@
   "peerDependencies": {
     "@types/node": ">= 13.9.1",
     "typescript": ">= 3.8.3"
+  },
+  "devDependencies": {
+    "@company-starter/utils-config": "file:../utils-config"
+  },
+  "scripts": {
+    "postinstall": "node lib/postinstall.js"
   }
 }
