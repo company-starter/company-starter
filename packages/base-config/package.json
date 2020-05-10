@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/base-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The config repository licence and more.",
   "directories": {
     "lib": "lib"
