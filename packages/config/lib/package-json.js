@@ -27,6 +27,7 @@ const update = (parentFolder) => {
 
   // should also remove format script because no more prettier
   Object.assign(parentPackage.scripts, {
+    format: undefined,
     lint: 'eslint . --ext js,ts,js,jsx,json --fix',
     test: 'jest',
     'test:watch': 'jest --watch',
