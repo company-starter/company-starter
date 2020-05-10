@@ -19,6 +19,12 @@ const update = (parentFolder) => {
   const parentPackagePath = path.resolve(parentFolder, 'package.json')
   const parentPackage = loadJsonFile(parentPackagePath)
 
+  parentPackage.scripts = parentPackage.scripts ? parentPackage.scripts : {}
+  parentPackage.devDependencies = parentPackage.devDependencies
+    ? parentPackage.devDependencies
+    : {}
+  parentPackage.jest = parentPackage.jest ? parentPackage.jest : {}
+
   // should also remove format script because no more prettier
   Object.assign(parentPackage.scripts, {
     lint: 'eslint . --ext js,ts,js,jsx,json --fix',
