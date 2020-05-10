@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/eslint-config",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Eslint config",
   "author": "company-starter",
   "main": "lib/index.js",
