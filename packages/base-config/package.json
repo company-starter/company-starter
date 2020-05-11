@@ -8,12 +8,21 @@
   "files": [
     "lib"
   ],
-  "peerDependencies": {
-    "@company-starter/utils-config": ">= file:../utils-config"
+  "dependencies": {
+    "@company-starter/utils-config": "file:../utils-config"
   },
   "devDependencies": {
+    "@company-starter/ts-config": "file:../ts-config",
     "@company-starter/jest-config": "file:../jest-config",
-    "@company-starter/utils-config": "file:../utils-config"
+    "@types/jest": "25.2.0",
+    "@types/supertest": "2.0.8",
+    "jest": "26.0.1",
+    "supertest": "4.0.2",
+    "ts-jest": "25.5.1",
+    "ts-node": "8.10.1",
+    "tsconfig-paths": "3.9.0",
+    "@types/node": "13.9.1",
+    "typescript": "3.8.3"
   },
   "scripts": {
     "postinstall": "node lib/postinstall.js",

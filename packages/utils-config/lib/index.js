@@ -1,8 +1,26 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 'use strict'
 
-const { copyFile, unlink, readFileSync, writeFileSync } = require('fs')
+const {
+  copyFileSync,
+  unlinkSync,
+  readFileSync,
+  writeFileSync,
+  mkdirSync
+} = require('fs')
 const { resolve } = require('path')
+
+const getParentFolder = () => {
+  const parentFolder = process.env.INIT_CWD
+
+  if (!parentFolder) {
+    throw new Error('This does not seem to be run by npm')
+  }
+
+  return parentFolder
+}
+
+const getParentFilePath = (filename) => resolve(getParentFolder(), filename)
 
 const loadJsonFile = (filePath) => {
   try {
@@ -19,7 +37,7 @@ const saveJsonFile = (filePath, data) => {
 }
 
 const updateChanges = (json, changes) => {
-  Object.keys(changes).forEach((changesKey) => {
+  for (const changesKey in changes) {
     const change = changes[changesKey]
     if (typeof change === 'object' && change !== null) {
       if (Array.isArray(change)) {
@@ -40,42 +58,48 @@ const updateChanges = (json, changes) => {
     } else {
       json[changesKey] = change
     }
-  })
+  }
 }
 
 const update = (filename, changes) => {
-  const jsonPath = resolve(process.env.INIT_CWD, filename)
+  const jsonPath = getParentFilePath(filename)
   const json = loadJsonFile(jsonPath)
-  updateChanges(json, changes)
+  if (Array.isArray(changes)) {
+    for (const change of changes) {
+      updateChanges(json, change)
+    }
+  } else {
+    updateChanges(json, changes)
+  }
   saveJsonFile(jsonPath, json)
 }
 
+const createDir = (dirName) => {
+  try {
+    mkdirSync(getParentFilePath(dirName))
+  } catch (err) {
+    return
+  }
+}
+
 const copy = (fileDir, fileName) => {
-  copyFile(
-    resolve(fileDir, fileName),
-    resolve(process.env.INIT_CWD, fileName),
-    (err) => {
-      if (err) throw err
-    }
-  )
+  try {
+    copyFileSync(resolve(fileDir, fileName), getParentFilePath(fileName))
+  } catch (err) {
+    return
+  }
 }
 
 const remove = (fileName) => {
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  unlink(resolve(process.env.INIT_CWD, fileName), () => {})
-}
-const getParentFolder = () => {
-  const parentFolder = process.env.INIT_CWD
-
-  if (!parentFolder) {
-    throw new Error('This does not seem to be run by npm')
+  try {
+    unlinkSync(getParentFilePath(fileName))
+  } catch (err) {
+    return
   }
-
-  return parentFolder
 }
-
 module.exports = {
   getParentFolder,
+  createDir,
   copy,
   update,
   remove

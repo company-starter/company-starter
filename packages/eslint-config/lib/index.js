@@ -12,7 +12,7 @@ module.exports = {
     project: './tsconfig.json',
     createDefaultProgram: true
   },
-  ignorePatterns: ['**/dist/**'],
+  ignorePatterns: ['**/dist/**', '**/node_modules/**'],
   overrides: [
     {
       files: ['*.ts', '*.tsx']
