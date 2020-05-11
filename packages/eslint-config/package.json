@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/eslint-config",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Eslint config",
   "main": "lib/index.js",
   "directories": {
@@ -13,13 +13,13 @@
     "@company-starter/utils-config": "file:../utils-config"
   },
   "devDependencies": {
-    "@company-starter/ts-config": "file:../ts-config",
     "@company-starter/jest-config": "file:../jest-config",
-    "jest": "26.0.1",
-    "supertest": "4.0.2",
+    "@company-starter/ts-config": "file:../ts-config",
     "@types/jest": "25.2.0",
     "@types/node": "13.9.1",
     "@types/supertest": "2.0.8",
+    "jest": "26.0.1",
+    "supertest": "4.0.2",
     "ts-jest": "25.5.1",
     "ts-node": "8.10.1",
     "tsconfig-paths": "3.9.0",
