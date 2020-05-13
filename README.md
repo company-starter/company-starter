@@ -1,5 +1,5 @@
 # company-starter
-An awesome starter for Full Stack JS companies
+An awesome starter for Full Stack JS companies with best practises for all your projects
 
 ## Technos we ❤️
 
