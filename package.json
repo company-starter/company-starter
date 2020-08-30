@@ -13,11 +13,6 @@
     "test:packages": "lerna run --parallel test",
     "test:packages:ci": "lerna run --parallel --no-bail test:ci",
     "test:packages:cov": "lerna run --parallel test:cov",
-    "test": "jest",
-    "test:cov": "jest --coverage",
-    "test:ci": "npm run test:cov -- --silent",
-    "test:watch": "jest --watch",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "lint": "eslint . --fix"
   },
   "dependencies": {
@@ -38,13 +33,6 @@
     "eslint-plugin-prettier": "3.1.4",
     "prettier": "2.1.1",
     "husky": "4.2.5",
-    "@types/jest": "25.2.0",
-    "@types/supertest": "2.0.8",
-    "jest": "26.0.1",
-    "supertest": "4.0.2",
-    "ts-jest": "25.5.1",
-    "ts-node": "8.10.1",
-    "tsconfig-paths": "3.9.0",
     "@types/node": "14.6.2",
     "typescript": "4.0.2"
   },
@@ -55,10 +43,5 @@
     "hooks": {
       "pre-push": "npm run test"
     }
-  },
-  "jest": {
-    "preset": "@company-starter/jest-config/lib",
-    "rootDir": "test",
-    "coverageDirectory": "../coverage"
   }
 }
