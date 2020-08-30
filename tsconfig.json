@@ -1,10 +1,7 @@
 {
   "extends": "@company-starter/ts-config/lib/tsconfig.json",
   "compilerOptions": {
-    "rootDir": ".",
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "rootDir": "."
   },
   "exclude": [
     "node_modules",

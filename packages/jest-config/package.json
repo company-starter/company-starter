@@ -1,42 +1,19 @@
 {
   "name": "@company-starter/jest-config",
-  "version": "1.0.9",
+  "version": "1.0.0",
   "description": "Jest config",
-  "directories": {
-    "lib": "lib"
-  },
-  "files": [
-    "lib"
-  ],
-  "dependencies": {
-    "@company-starter/utils-config": "file:../utils-config"
-  },
-  "devDependencies": {
-    "@company-starter/ts-config": "file:../ts-config",
-    "@types/jest": "25.2.0",
-    "@types/node": "13.9.1",
-    "@types/supertest": "2.0.8",
-    "jest": "26.0.1",
-    "supertest": "4.0.2",
-    "ts-jest": "25.5.1",
-    "ts-node": "8.10.1",
-    "tsconfig-paths": "3.9.0",
-    "typescript": "3.8.3"
-  },
+  "main": "lib/jest-preset.json",
   "peerDependencies": {
-    "jest": "26.0.1",
-    "supertest": "4.0.2"
+    "@types/jest": "26.0.10",
+    "@types/supertest": "2.0.10",
+    "jest": "26.4.2",
+    "supertest": "4.0.2",
+    "ts-jest": "26.3.0",
+    "ts-node": "9.0.0",
+    "tsconfig-paths": "3.9.0"
   },
   "scripts": {
-    "postinstall": "node lib/postinstall.js",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
-  },
-  "jest": {
-    "preset": "@company-starter/jest-config/lib",
-    "rootDir": "test",
-    "coverageDirectory": "../coverage"
+    "build": "tsc",
+    "postinstall": "node lib/src/postinstall.js"
   }
 }

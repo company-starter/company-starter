@@ -1,0 +1,12 @@
+{
+    "name": "@company-starter/husky-config",
+    "version": "1.0.0",
+    "description": "Husky config",
+    "peerDependencies": {
+        "husky": "4.2.5"
+    },
+    "scripts": {
+        "build": "tsc",
+        "postinstall": "node lib/src/postinstall.js"
+    }
+}

@@ -1,13 +1,11 @@
 {
-  "extends": "@company-starter/ts-config/lib/tsconfig.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "rootDir": ".",
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "outDir": "lib"
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "lib"
   ]
 }

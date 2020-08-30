@@ -19,4 +19,14 @@ todos-native: A React Native application for Android and iOS
 
 ## This repo
 
-A Lerna monorepo hosted on Verdaccio with shared components using Storybook, shared configuration, NestJS modules, shared interfaces, and many others
+A Lerna monorepo published on Verdaccio with shared components using Storybook, shared configuration, NestJS modules, shared interfaces, and many others
+
+## How to use
+
+```bash
+# hoist dependencies
+npm run link
+
+# install dependencies
+npm run bootstrap
+```

@@ -1,39 +1,9 @@
 {
   "name": "@company-starter/base-config",
-  "version": "1.0.5",
-  "description": "The config repository licence and more",
-  "directories": {
-    "lib": "lib"
-  },
-  "files": [
-    "lib"
-  ],
-  "dependencies": {
-    "@company-starter/utils-config": "file:../utils-config"
-  },
-  "devDependencies": {
-    "@company-starter/jest-config": "file:../jest-config",
-    "@company-starter/ts-config": "file:../ts-config",
-    "@types/jest": "25.2.0",
-    "@types/node": "13.9.1",
-    "@types/supertest": "2.0.8",
-    "jest": "26.0.1",
-    "supertest": "4.0.2",
-    "ts-jest": "25.5.1",
-    "ts-node": "8.10.1",
-    "tsconfig-paths": "3.9.0",
-    "typescript": "3.8.3"
-  },
+  "version": "1.0.0",
+  "description": "The config repository, licence and more",
   "scripts": {
-    "postinstall": "node lib/postinstall.js",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
-  },
-  "jest": {
-    "preset": "@company-starter/jest-config/lib",
-    "rootDir": "test",
-    "coverageDirectory": "../coverage"
+    "build": "tsc",
+    "postinstall": "node lib/src/postinstall.js"
   }
 }

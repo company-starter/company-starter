@@ -1,0 +1,1 @@
+{"version":3,"file":"changes.js","sourceRoot":"","sources":["../../src/changes.ts"],"names":[],"mappings":";;AAAa,QAAA,mBAAmB,GAAG;IACjC,OAAO,EAAE,gCAAgC;CAC1C,CAAA;AAEY,QAAA,kBAAkB,GAAG;IAChC,OAAO,EAAE;QACP,IAAI,EAAE,gBAAgB;QACtB,MAAM,EAAE,SAAS;KAClB;CACF,CAAA"}

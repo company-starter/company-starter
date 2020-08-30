@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    // "inlineSourceMap": true,
-    // "inlineSources": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "es2015",

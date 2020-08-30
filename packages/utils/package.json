@@ -1,0 +1,9 @@
+{
+	"name": "@company-starter/utils",
+	"version": "1.0.0",
+  "description": "Utils",
+  "main": "lib/src/index.js",
+  "scripts": {
+    "build": "tsc"
+  }
+}
