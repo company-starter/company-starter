@@ -21,6 +21,10 @@ todos-native: A React Native application for Android and iOS
 
 A Lerna monorepo published on Verdaccio with shared components using Storybook, shared configuration, NestJS modules, shared interfaces, and many others
 
+## IMPORTANT
+
+When installing one of the package (for example eslint-config), do not forget to redo npm install so you install the peerdependencies of the package (npm i && npm i) => try to improve this 
+
 ## How to use
 
 ```bash
