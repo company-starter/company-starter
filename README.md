@@ -36,8 +36,8 @@ npm run lerna:changed
 # list diff with previous version of dependencies that have changed
 npm run lerna:diff
 
-# publish dependencies that have changed
-npm run lerna:publish
+# publish dependencies that have changed 
+npm run lerna:publish # push your changes first, lerna:publish will increase version + push
 
 # remove remote tag
 git push --delete origin @company-starter/my-module@my-version
