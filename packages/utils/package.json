@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utils",
   "main": "lib/src/index.js",
   "scripts": {
