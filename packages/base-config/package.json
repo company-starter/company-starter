@@ -2,6 +2,9 @@
   "name": "@company-starter/base-config",
   "version": "1.0.0",
   "description": "The config repository, licence and more",
+  "dependencies": {
+    "@company-starter/utils": "file:../utils"
+  },
   "scripts": {
     "build": "tsc",
     "postinstall": "node lib/src/postinstall.js"

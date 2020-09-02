@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Eslint config",
   "main": "lib/.eslintrc.json",
+  "dependencies": {
+    "@company-starter/utils": "file:../utils"
+  },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "4.0.1",
     "@typescript-eslint/parser": "4.0.1",

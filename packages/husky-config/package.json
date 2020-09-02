@@ -2,6 +2,9 @@
   "name": "@company-starter/husky-config",
   "version": "1.0.0",
   "description": "Husky config",
+  "dependencies": {
+    "@company-starter/utils": "file:../utils"
+  },
   "peerDependencies": {
     "husky": "4.2.5"
   },

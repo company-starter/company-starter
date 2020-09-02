@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Jest config",
   "main": "lib/jest-preset.json",
+  "dependencies": {
+    "@company-starter/utils": "file:../utils"
+  },
   "peerDependencies": {
     "@types/jest": "26.0.13",
     "@types/supertest": "2.0.10",
