@@ -38,4 +38,16 @@ npm run lerna:diff
 
 # publish dependencies that have changed
 npm run lerna:publish
+
+# remove remote tag
+git push --delete origin @company-starter/my-module@my-version
+
+# remove local tag
+git tag -d @company-starter/my-module@my-version
+
+# remove all remote tags of all dependencies
+git ls-remote --tags origin | awk '{print "git push --delete origin "$1"\0"}' | xargs -0 bash -c
+
+# remove all local tags of all dependencies
+git tag | awk '{print "git tag -d "$1"\0"}' | xargs -0 bash -c
 ```

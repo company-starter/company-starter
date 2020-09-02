@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/ts-config",
-  "version": "1.0.2",
+  "version": "0.0.0",
   "description": "TypeScript configuration",
   "peerDependencies": {
     "@types/node": "14.6.2",
