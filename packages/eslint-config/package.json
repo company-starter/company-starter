@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/eslint-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Eslint config",
   "main": "lib/.eslintrc.json",
   "peerDependencies": {

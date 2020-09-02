@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/jest-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Jest config",
   "main": "lib/jest-preset.json",
   "peerDependencies": {

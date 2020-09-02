@@ -1,6 +1,6 @@
 {
   "name": "@company-starter/husky-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Husky config",
   "peerDependencies": {
     "husky": "4.2.5"
