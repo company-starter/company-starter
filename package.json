@@ -8,11 +8,10 @@
     "lerna:changed": "lerna changed",
     "lerna:diff": "lerna diff",
     "lerna:publish": "lerna publish",
-    "lerna:version": "lerna version --force-publish",
-    "lerna:build:packages": "lerna run build",
-    "lerna:test:packages": "lerna run --parallel test",
-    "lerna:test:packages:ci": "lerna run --parallel --no-bail test:ci",
-    "lerna:test:packages:cov": "lerna run --parallel test:cov",
+    "lerna:build": "lerna run build",
+    "lerna:test": "lerna run --parallel test",
+    "lerna:test:ci": "lerna run --parallel --no-bail test:ci",
+    "lerna:test:cov": "lerna run --parallel test:cov",
     "lint": "eslint . --fix"
   },
   "dependencies": {
