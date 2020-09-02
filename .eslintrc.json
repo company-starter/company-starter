@@ -1,3 +1,4 @@
 {
-  "extends": "@company-starter/eslint-config"
+  "extends": "@company-starter/eslint-config",
+  "rules": {}
 }

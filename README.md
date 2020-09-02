@@ -24,6 +24,7 @@ A Lerna monorepo published on Verdaccio with shared components using Storybook, 
 ## IMPORTANT
 
 When installing one of the package (for example eslint-config), do not forget to redo npm install so you install the peerdependencies of the package (npm i && npm i) => try to improve this 
+Also, it would be nice to sort the whole package.json at the end (maybe a script that does both)
 
 ## How to use
 
