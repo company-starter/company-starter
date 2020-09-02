@@ -25,8 +25,17 @@ A Lerna monorepo published on Verdaccio with shared components using Storybook, 
 
 ```bash
 # hoist dependencies
-npm run link
+npm run lerna:link
 
 # install dependencies
-npm run bootstrap
+npm run lerna:bootstrap
+
+# list dependencies that have changed
+npm run lerna:changed
+
+# list diff with previous version of dependencies that have changed
+npm run lerna:diff
+
+# publish dependencies that have changed
+npm run lerna:publish
 ```
